@@ -31,18 +31,20 @@ find -name install-build-deps.sh
 
 # https://webrtc.org/native-code/android/
 cd ~/
-echo "start fetching webrtc_android"
+echo "###################   start fetching webrtc_android"
 fetch --nohooks webrtc_android
 gclient sync
 
 
 ## compiling phase
 find -name src
+echo "###################   start gn gen"
 gn gen out/Debug --args='target_os="android" target_cpu="arm"'
 
 
 
 
+echo "###################   start ninja"
 ninja -C out/Debug
 
 
