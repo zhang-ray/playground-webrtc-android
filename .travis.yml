@@ -1,0 +1,7 @@
+os:
+  - linux
+language: cpp
+sudo: required
+
+script:
+  - ./wtf.sh
