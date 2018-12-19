@@ -37,8 +37,9 @@ echo "y" | gclient sync
 
 
 ## compiling phase
-find -name src
+#find -name src
 echo "###################   start gn gen"
+cd ./src/ || exit 1
 gn gen out/Debug --args='target_os="android" target_cpu="arm"'
 
 
