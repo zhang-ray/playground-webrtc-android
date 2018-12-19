@@ -33,7 +33,7 @@ find -name install-build-deps.sh
 cd ~/
 echo "###################   start fetching webrtc_android"
 fetch --nohooks webrtc_android
-gclient sync
+echo "y" | gclient sync
 
 
 ## compiling phase
