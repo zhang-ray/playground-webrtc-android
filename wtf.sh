@@ -30,6 +30,8 @@ find -name install-build-deps.sh
 
 
 # https://webrtc.org/native-code/android/
+cd ~/
+echo "start fetching webrtc_android"
 fetch --nohooks webrtc_android
 gclient sync
 
